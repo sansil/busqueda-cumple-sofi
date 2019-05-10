@@ -1,16 +1,33 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <div class="background"></div>
+    <!-- <img src="@/assets/portada.jpeg"> -->
     <router-view/>
   </div>
 </template>
 
-<style lang="scss">
+
+<style scoped>
+@import url("https://fonts.googleapis.com/css?family=Dosis");
+@import url("https://fonts.googleapis.com/css?family=Pirata+One");
+
+.background {
+  /* Preboda-36.jpg */
+  background-image: url("./assets/Preboda-36.jpg");
+  filter: opacity(75%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #bcaaa4;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+}
+
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Pirata One", cursive;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -18,12 +35,14 @@
 }
 #nav {
   padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: Black;
 }
 </style>
